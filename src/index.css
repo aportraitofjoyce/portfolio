@@ -32,6 +32,7 @@ body {
     min-height: 100vh;
     background-color: var(--bg-color);
     color: var(--black);
+    font-size: 16px;
 }
 
 #root {
@@ -46,19 +47,52 @@ body {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 56px;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 40px;
 }
 
-@media screen and (min-width: 1024px) {
-    h1 {
-        font-size: 48px;
-    }
+button {
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+    background-color: var(--primary);
+    border: none;
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-    h2 {
-        font-size: 32px;
-    }
+button:hover {
+    opacity: 0.9;
+}
+
+input {
+    border: 2px solid var(--border-color);
+    font-size: 16px;
+    outline: none;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+textarea {
+    border: 2px solid var(--border-color);
+    font-size: 16px;
+    outline: none;
+    padding: 12px;
+    border-radius: 4px;
+    max-width: 448px;
+}
+
+input:hover,
+input:focus {
+    border-color: var(--black-light);
+}
+
+textarea:hover,
+textarea:focus {
+    border-color: var(--black-light);
 }

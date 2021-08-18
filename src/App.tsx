@@ -1,7 +1,11 @@
 import React from 'react'
 import {Header} from './components/Header/Header'
-import {HelloBlock} from './components/Main/HelloBlock/HelloBlock'
+import {Hello} from './components/Main/Hello/Hello'
 import {Skills} from './components/Main/Skills/Skills'
+import {Projects} from './components/Main/Projects/Projects'
+import {ContactMe} from './components/Main/ContactMe/ContactMe'
+import {Footer} from './components/Footer/Footer'
+import {Social} from './components/Main/Social/Social'
 
 
 export function App() {
@@ -9,10 +13,13 @@ export function App() {
         <>
             <Header/>
             <main className={'mainWrapper'}>
-                <HelloBlock/>
+                <Hello/>
                 <Skills/>
+                <Projects/>
+                <ContactMe/>
+                <Social/>
             </main>
-
+            <Footer/>
         </>
     )
 }

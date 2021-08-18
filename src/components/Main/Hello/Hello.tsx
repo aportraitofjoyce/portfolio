@@ -1,8 +1,8 @@
 import React from 'react'
-import s from './HelloBlock.module.css'
+import s from './Hello.module.css'
 import {MaximizeIcon} from '../../Icons/MaximizeIcon/MaximizeIcon'
 
-export const HelloBlock = () => {
+export const Hello = () => {
     return (
         <section id={'hello'} className={s.wrapper}>
             <div className={s.container}>

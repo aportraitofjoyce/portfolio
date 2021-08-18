@@ -1,14 +1,8 @@
 .wrapper {
-    position: fixed;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    right: 0;
     display: flex;
-    align-items: center;
-    height: 72px;
-    background-color: var(--bg-color);
-    z-index: 100;
+    justify-content: center;
+    background-color: var(--primary-light);
+    padding: 72px 0;
 }
 
 .container {

@@ -9,43 +9,24 @@
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 40px;
     padding: 0 16px;
     flex-grow: 1;
     text-align: center;
 }
 
-.skillsContainer {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.skillContainer {
+.formContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 24px;
-    padding: 24px;
-    flex: 1 1 50%;
-}
-
-.iconContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--primary-light);
-    width: 56px;
-    height: 56px;
-    border-radius: 4px;
+    max-width: 448px;
+    width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
     .container {
         flex-grow: 0;
         width: 1024px;
-    }
-
-    .skillContainer {
-        flex: 1 1 33.33%;
     }
 }
