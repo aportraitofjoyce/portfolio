@@ -1,20 +1,45 @@
 .wrapper {
     display: flex;
     justify-content: center;
-    background-color: var(--primary-light);
     padding: 72px 0;
 }
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
     width: 100%;
     padding: 0 16px;
+
 }
 
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    background-color: var(--primary);
+}
+
+.iconContainer svg {
+    color: var(--white);
+}
+
+.iconContainer:hover {
+    background-color: var(--primary-light);
+}
+
+.iconContainer:hover svg {
+    color: var(--black);
+}
+
+/*
 @media screen and (min-width: 1024px) {
     .container {
         width: 1024px;
     }
-}
+}*/

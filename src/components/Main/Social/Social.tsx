@@ -6,13 +6,13 @@ export const Social = () => {
     return (
         <section className={s.wrapper}>
             <div className={s.container}>
-                <a className={s.iconContainer}>
+                <a className={s.iconContainer} href={'#footer'}>
                     <MaximizeIcon/>
                 </a>
-                <a className={s.iconContainer}>
+                <a className={s.iconContainer} href={'#footer'}>
                     <MaximizeIcon/>
                 </a>
-                <a className={s.iconContainer}>
+                <a className={s.iconContainer} href={'#footer'}>
                     <MaximizeIcon/>
                 </a>
             </div>
