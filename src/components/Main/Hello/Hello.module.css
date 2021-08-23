@@ -23,7 +23,7 @@
 }
 
 .imageContainer {
-    height: 480px;
+    width: 100%;
 }
 
 .imageContainer img {
