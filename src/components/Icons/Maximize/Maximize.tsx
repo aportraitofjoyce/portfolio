@@ -6,7 +6,7 @@ type MaximizeIconPropsType = {
     primary?: boolean
 }
 
-export const MaximizeIcon: React.FC<MaximizeIconPropsType> = (props) => {
+export const Maximize: React.FC<MaximizeIconPropsType> = (props) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={props.width || 24} height={props.height || 24}
              viewBox="0 0 24 24"

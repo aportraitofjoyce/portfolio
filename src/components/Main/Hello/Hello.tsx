@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './Hello.module.css'
-import {MaximizeIcon} from '../../Icons/MaximizeIcon/MaximizeIcon'
+import {Maximize} from '../../Icons/Maximize/Maximize'
 
 export const Hello = () => {
     return (
@@ -12,7 +12,7 @@ export const Hello = () => {
                     <h4>Гони деньги</h4>
                 </div>
                 <div className={s.imageContainer}>
-                    {/*<MaximizeIcon width={48} height={48} primary/>*/}
+                    {/*<Maximize width={48} height={48} primary/>*/}
                     <img
                         src="https://pngimg.com/uploads/anime_girl/anime_girl_PNG96.png"
                         alt="me"/>

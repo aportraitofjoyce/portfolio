@@ -1,7 +1,12 @@
 import React from 'react'
 import s from './Skills.module.css'
-import {MaximizeIcon} from '../../Icons/MaximizeIcon/MaximizeIcon'
 import {Skill} from './Skill/Skill'
+import {ReactIcon} from '../../Icons/React/ReactIcon'
+import {Redux} from '../../Icons/Redux/Redux'
+import {JavaScript} from '../../Icons/JavaScript/JavaScript'
+import {TypeScript} from '../../Icons/TypeScript/TypeScript'
+import {HTML} from '../../Icons/HTML/HTML'
+import {CSS} from '../../Icons/CSS/CSS'
 
 type SkillsDataType = {
     id: number
@@ -12,26 +17,49 @@ type SkillsDataType = {
 export const Skills = () => {
 
     const skillsData: SkillsDataType[] = [
-        {id: 1, name: 'React', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.' },
-        {id: 2, name: 'Redux', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'},
-        {id: 3, name: 'JavaScript', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'},
-        {id: 4, name: 'TypeScript', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'},
-        {id: 5, name: 'HTML', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'},
-        {id: 6, name: 'CSS', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'}
+        {
+            id: 1,
+            name: 'React',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'
+        },
+        {
+            id: 2,
+            name: 'Redux',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'
+        },
+        {
+            id: 3,
+            name: 'JavaScript',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'
+        },
+        {
+            id: 4,
+            name: 'TypeScript',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'
+        },
+        {
+            id: 5,
+            name: 'HTML',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'
+        },
+        {
+            id: 6,
+            name: 'CSS',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'
+        }
     ]
 
-    const skills = skillsData.map(s => {
-        return (
-            <Skill key={s.name} name={s.name} description={s.description}>
-                {s.name === 'React' && <MaximizeIcon/>}
-                {s.name === 'Redux' && <MaximizeIcon/>}
-                {s.name === 'JavaScript' && <MaximizeIcon/>}
-                {s.name === 'TypeScript' && <MaximizeIcon/>}
-                {s.name === 'HTML' && <MaximizeIcon/>}
-                {s.name === 'CSS' && <MaximizeIcon/>}
-            </Skill>
-        )
-    })
+    const skills = skillsData.map(s => <Skill key={s.name}
+                                              name={s.name}
+                                              description={s.description}>
+            {s.name === 'React' && <ReactIcon/>}
+            {s.name === 'Redux' && <Redux/>}
+            {s.name === 'JavaScript' && <JavaScript/>}
+            {s.name === 'TypeScript' && <TypeScript/>}
+            {s.name === 'HTML' && <HTML/>}
+            {s.name === 'CSS' && <CSS/>}
+        </Skill>
+    )
 
     return (
         <section id={'skills'} className={s.wrapper}>
