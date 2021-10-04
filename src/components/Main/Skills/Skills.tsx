@@ -15,7 +15,6 @@ type SkillsDataType = {
 }
 
 export const Skills = () => {
-
     const skillsData: SkillsDataType[] = [
         {
             id: 1,

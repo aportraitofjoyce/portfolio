@@ -1,5 +1,6 @@
 import React from 'react'
 import s from '../Projects.module.css'
+import {ScrollReveal} from '../../../../utils/ScrollReveal'
 
 type ProjectPropsType = {
     name: string
@@ -7,8 +8,9 @@ type ProjectPropsType = {
     image: string
 }
 
-const Project: React.FC<ProjectPropsType> = (props) => {
+export const Project: React.FC<ProjectPropsType> = (props) => {
     return (
+
         <div className={s.projectContainer}>
             <div className={s.imageContainer}>
                 <img src={props.image} alt={props.name}/>
@@ -17,7 +19,6 @@ const Project: React.FC<ProjectPropsType> = (props) => {
             <h4>{props.name}</h4>
             <div>{props.shortDescription}</div>
         </div>
+
     )
 }
-
-export default Project

@@ -8,11 +8,11 @@ type SkillPropsType = {
 export const Skill: React.FC<SkillPropsType> = (props) => {
     return (
         <div className={s.skillContainer}>
-            <div className={s.iconContainer}>
-                {props.children}
-            </div>
-            <h4>{props.name}</h4>
-            <div>{props.description}</div>
+                <div className={s.iconContainer}>
+                    {props.children}
+                </div>
+                <h4>{props.name}</h4>
+                <div>{props.description}</div>
         </div>
     )
 }

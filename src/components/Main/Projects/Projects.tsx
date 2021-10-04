@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './Projects.module.css'
-import Project from './Project/Project'
+import {Project} from './Project/Project'
 
 type ProjectsDataType = {
     id: number

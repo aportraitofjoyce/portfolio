@@ -1,6 +1,7 @@
 import React from 'react'
 import s from '../ContactMe.module.css'
 import emailjs from 'emailjs-com'
+import {ScrollReveal} from '../../../../utils/ScrollReveal'
 
 export const Form = () => {
     const onSubmit = async (e: any) => {
@@ -19,7 +20,9 @@ export const Form = () => {
             <input type='text' name={'name'} placeholder={'Name'}/>
             <input type='text' name={'email'} placeholder={'Email'}/>
             <textarea name='message' placeholder={'Say something about your project...'}/>
-            <button type={'submit'}>Send</button>
+            <ScrollReveal>
+                <button type={'submit'}>Send</button>
+            </ScrollReveal>
         </form>
     )
 }
