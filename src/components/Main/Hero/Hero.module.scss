@@ -1,0 +1,42 @@
+@use 'src/styles/variables';
+@use 'src/styles/mixins';
+
+.wrapper {
+  @include mixins.flex(row, center, center);
+  background-color: variables.$primaryLightColor;
+  border-radius: variables.$borderRadius;
+  padding: 72px 0;
+  margin: 0 16px;
+
+  .container {
+    @include mixins.flex(column, center, center);
+    gap: 40px;
+    padding: 0 16px;
+
+    @media screen and (min-width: variables.$containerWidth) {
+      @include mixins.flex(row, space-between, center);
+      width: variables.$containerWidth;
+    }
+
+    .textContainer {
+      @include mixins.flex(column, center, flex-start);
+      gap: 16px;
+    }
+
+    .imageContainer {
+      width: 100%;
+
+      img {
+        width: inherit;
+        height: inherit;
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+}
+
+
+
+
+
+

@@ -1,27 +1,15 @@
-import React, {useState} from 'react'
-import s from './HeaderNav.module.css'
-import {Menu} from '../../Icons/Menu/Menu'
+import React from 'react'
+import s from '../Header.module.scss'
+import {linksType} from '../Header'
 
-export const HeaderNav = () => {
-    const [isOpen, setIsOpen] = useState<boolean>(false)
+type HeaderNavPropsType = {
+    links: linksType[]
+}
 
-    const linksContainerStyles = `${s.linksContainer} ${isOpen && s.open}`
-
-    const onLinkClickHandler = () => setIsOpen(!isOpen)
-
+export const HeaderNav: React.FC<HeaderNavPropsType> = ({links}) => {
     return (
-        <nav>
-            <div className={s.menuContainer} onClick={onLinkClickHandler}>
-                <Menu/>
-            </div>
-
-            <div className={linksContainerStyles}>
-                <a href="#" onClick={onLinkClickHandler}>Home</a>
-                <a href="#skills" onClick={onLinkClickHandler}>Skills</a>
-                <a href="#projects" onClick={onLinkClickHandler}>Projects</a>
-                <a href="#contact-me" onClick={onLinkClickHandler}>Contact me</a>
-            </div>
-
+        <nav className={s.linksContainer}>
+            {links.map(l => <a key={l.name} href={l.link}>{l.name}</a>)}
         </nav>
     )
 }

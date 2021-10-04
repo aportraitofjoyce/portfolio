@@ -1,0 +1,58 @@
+@use 'src/styles/variables';
+@use 'src/styles/mixins';
+
+.wrapper {
+  @include mixins.flex(row, center, center);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background-color: variables.$bgColor;
+  z-index: 100;
+
+  .container {
+    @include mixins.flex(row, space-between, center);
+    width: 100%;
+    padding: 0 16px;
+
+    @media screen and (min-width: variables.$containerWidth) {
+      width: variables.$containerWidth;
+    }
+  }
+}
+
+.mobileMenuContainer {
+  cursor: pointer;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  .mobileLinksContainer {
+    display: none;
+
+    &.open {
+      @include mixins.flex(column, center, center);
+      background-color: variables.$bgColor;
+      gap: 16px;
+      position: fixed;
+      font-size: 24px;
+      top: 72px;
+      right: 0;
+      left: 0;
+      padding: 16px;
+      height: 100%;
+    }
+  }
+}
+
+.linksContainer {
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+}

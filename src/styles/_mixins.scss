@@ -1,0 +1,20 @@
+@use 'variables';
+
+@mixin inputsDefault {
+  font: 400 variables.$fontSizeDefault variables.$fontFamily;
+  border: variables.$border;
+  outline: none;
+  padding: 12px;
+  border-radius: 4px;
+
+  &:hover, &:focus {
+    border-color: variables.$textLightColor;
+  }
+}
+
+@mixin flex($flexDirection: row, $justifyContent: center, $alignItems: center) {
+  display: flex;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}

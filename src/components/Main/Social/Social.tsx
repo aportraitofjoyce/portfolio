@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './Social.module.css'
+import s from './Social.module.scss'
 import {Github} from '../../Icons/Github/Github'
 import {Telegram} from '../../Icons/Telegram/Telegram'
 import {Email} from '../../Icons/Email/Email'

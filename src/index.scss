@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&display=swap');
+@import 'styles/variables', 'styles/mixins';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 400 $fontSizeDefault $fontFamily;
+  color: $textColor;
+  background-color: $bgColor;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 72px;
+}
+
+button {
+  background-color: $primaryColor;
+  color: $whiteColor;
+  font: 700 $fontSizeDefault $fontFamily;
+  line-height: 1;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $primaryLightColor;
+  }
+}
+
+input {
+  @include inputsDefault;
+}
+
+textarea {
+  @include inputsDefault;
+  max-width: 448px;
+}
+
+a {
+  color: $textColor;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    color: $primaryLightColor;
+  }
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 24px;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './Skills.module.css'
+import s from './Skills.module.scss'
 import {Skill} from './Skill/Skill'
 import {ReactIcon} from '../../Icons/React/ReactIcon'
 import {Redux} from '../../Icons/Redux/Redux'
