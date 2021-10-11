@@ -11,7 +11,7 @@ export const Skill: React.FC<SkillPropsType> = (props) => {
                 <div className={s.iconContainer}>
                     {props.children}
                 </div>
-                <h4>{props.name}</h4>
+                <strong>{props.name}</strong>
                 <div>{props.description}</div>
         </div>
     )

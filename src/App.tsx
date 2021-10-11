@@ -8,10 +8,10 @@ import {Footer} from './components/Footer/Footer'
 import {Social} from './components/Main/Social/Social'
 import './index.scss'
 
-
 export const App: React.FC = () => (
     <>
         <Header/>
+
         <main>
             <Hero/>
             <Skills/>
@@ -19,6 +19,7 @@ export const App: React.FC = () => (
             <ContactMe/>
             <Social/>
         </main>
+
         <Footer/>
     </>
 )

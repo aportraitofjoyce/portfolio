@@ -1,17 +1,15 @@
 /* Variables - Color*/
 //$primaryColor: #5b81dd;
-$primaryColor: #ffa952;
-$primaryLightColor: #ffc68c;
-$textColor: #383838;
-$textLightColor: #686868;
-$whiteColor: #fff;
-$bgColor: #f5f5f5;
-$borderColor: #ddd;
+$primaryColor: #f0a253;
+$secondaryColor: #f0b153;
 
+$lightColor: whitesmoke;
+$darkColor: #333;
+$darkLightColor: #404040;
 
 /* Variables - Other*/
 $fontFamily: 'Fira Sans', sans-serif;
 $fontSizeDefault: 16px;
-$border: 2px solid $borderColor;
+$border: 2px solid $lightColor;
 $borderRadius: 4px;
 $containerWidth: 1024px;

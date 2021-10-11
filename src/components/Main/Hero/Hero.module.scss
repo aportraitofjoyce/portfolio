@@ -3,7 +3,7 @@
 
 .wrapper {
   @include mixins.flex(row, center, center);
-  background-color: variables.$primaryLightColor;
+  background-color: variables.$primaryColor;
   border-radius: variables.$borderRadius;
   padding: 72px 0;
   margin: 0 16px;
@@ -20,7 +20,24 @@
 
     .textContainer {
       @include mixins.flex(column, center, flex-start);
-      gap: 16px;
+      gap: 24px;
+      color: variables.$darkColor;
+
+      h1 {
+        color: variables.$darkColor;
+      }
+
+      button {
+        background: none;
+        border-radius: 0;
+        padding: 12px 8px;
+        text-transform: none;
+        border-bottom: 2px solid variables.$darkColor;
+
+        &:hover {
+          padding: 12px 24px;
+        }
+      }
     }
 
     .imageContainer {
@@ -29,7 +46,6 @@
       img {
         width: inherit;
         height: inherit;
-        mix-blend-mode: multiply;
       }
     }
   }

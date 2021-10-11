@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './Header.module.scss'
 import {HeaderNav} from './HeaderNav/HeaderNav'
-import {HeaderLogo} from './HeaderLogo/HeaderLogo'
 import {HeaderMobileNav} from './HeaderMobileNav/HeaderMobileNav'
 
 export type linksType = {
@@ -20,7 +19,9 @@ export const Header = () => {
     return (
         <header className={s.wrapper}>
             <div className={s.container}>
-                <HeaderLogo/>
+                <div>
+                    <h4>My portfolio</h4>
+                </div>
                 <HeaderNav links={links}/>
                 <HeaderMobileNav links={links}/>
             </div>

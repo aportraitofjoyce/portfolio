@@ -48,18 +48,6 @@ export const Skills = () => {
         }
     ]
 
-    const skills = skillsData.map(s => <Skill key={s.name}
-                                              name={s.name}
-                                              description={s.description}>
-            {s.name === 'React' && <ReactIcon/>}
-            {s.name === 'Redux' && <Redux/>}
-            {s.name === 'JavaScript' && <JavaScript/>}
-            {s.name === 'TypeScript' && <TypeScript/>}
-            {s.name === 'HTML' && <HTML/>}
-            {s.name === 'CSS' && <CSS/>}
-        </Skill>
-    )
-
     return (
         <section id={'skills'} className={s.wrapper}>
             <div className={s.container}>
@@ -68,7 +56,17 @@ export const Skills = () => {
                 </div>
 
                 <div className={s.skillsContainer}>
-                    {skills}
+                    {skillsData.map(s =>
+                        <Skill key={s.name}
+                               name={s.name}
+                               description={s.description}>
+                            {s.name === 'React' && <ReactIcon/>}
+                            {s.name === 'Redux' && <Redux/>}
+                            {s.name === 'JavaScript' && <JavaScript/>}
+                            {s.name === 'TypeScript' && <TypeScript/>}
+                            {s.name === 'HTML' && <HTML/>}
+                            {s.name === 'CSS' && <CSS/>}
+                        </Skill>)}
                 </div>
             </div>
         </section>

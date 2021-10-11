@@ -1,54 +1,47 @@
-.wrapper {
-    display: flex;
-    justify-content: center;
-    padding: 72px 0;
-    margin: 0;
-}
+@use 'src/styles/variables';
 
-.container {
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 72px 0;
+  margin: 0;
+
+  .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
     padding: 0 16px;
 
-}
-.iconsContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
-    max-width: 448px;
-    width: 100%;
-}
+    .iconsContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      max-width: 448px;
+      width: 100%;
 
-.iconContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    width: 48px;
-    height: 48px;
-    border-radius: 4px;
-    background-color: var(--primary);
-}
+      .iconContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        width: 48px;
+        height: 48px;
+        border-radius: 4px;
+        background-color: variables.$primaryColor;
 
-.iconContainer svg {
-    color: var(--white);
-}
-
-.iconContainer:hover {
-    background-color: var(--primary-light);
-}
-
-.iconContainer:hover svg {
-    color: var(--black);
+        svg {
+          color: variables.$darkColor;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .container {
-
-        width: 1024px;
-    }
+  .container {
+    width: 1024px;
+  }
 }

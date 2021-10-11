@@ -1,10 +1,13 @@
+@use 'src/styles/variables';
+@use 'src/styles/mixins';
+
 .wrapper {
     display: flex;
     justify-content: center;
     margin: 0 16px;
     padding: 72px 0;
     border-radius: 4px;
-    background-color: var(--primary-light);
+    background-color: variables.$darkLightColor;
 }
 
 .container {
@@ -39,6 +42,7 @@
 .imageContainer img {
     border-radius: 4px;
     width: inherit;
+    filter: grayscale(1);
 }
 
 .button {

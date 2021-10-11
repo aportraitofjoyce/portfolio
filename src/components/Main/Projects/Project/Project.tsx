@@ -16,7 +16,7 @@ export const Project: React.FC<ProjectPropsType> = (props) => {
                 <img src={props.image} alt={props.name}/>
                 <button className={s.button}>Look</button>
             </div>
-            <h4>{props.name}</h4>
+            <strong>{props.name}</strong>
             <div>{props.shortDescription}</div>
         </div>
 

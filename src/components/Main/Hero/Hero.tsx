@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './Hero.module.scss'
-import g1 from '../../../assets/img/g1.jpg'
+import src from '../../../assets/img/hero.png'
 
 export const Hero: React.FC = () => {
     return (
@@ -8,10 +8,11 @@ export const Hero: React.FC = () => {
             <div className={s.container}>
                 <div className={s.textContainer}>
                     <h1>Web Development on React</h1>
-                    <h3>Clear, modern and effective</h3>
+                    <button>Download CV</button>
                 </div>
+
                 <div className={s.imageContainer}>
-                    <img src={g1} alt='hero'/>
+                    <img src={src} alt='hero'/>
                 </div>
             </div>
         </section>
