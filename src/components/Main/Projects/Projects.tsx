@@ -44,7 +44,7 @@ export const Projects = () => {
 
     return (
         <section id={'projects'} className={s.wrapper}>
-            <Slide direction={'right'}>
+            <Slide direction={'right'} triggerOnce={true}>
                 <div className={s.container}>
                     <div className={s.textContainer}>
                         <h2>Projects</h2>

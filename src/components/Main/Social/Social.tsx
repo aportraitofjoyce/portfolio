@@ -9,7 +9,7 @@ import {Slide} from 'react-awesome-reveal'
 export const Social = () => {
     return (
         <section className={s.wrapper}>
-            <Slide direction={'left'}>
+            <Slide direction={'left'} triggerOnce={true}>
             <div className={s.container}>
 
                 <div className={s.iconsContainer}>

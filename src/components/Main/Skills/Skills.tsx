@@ -51,7 +51,7 @@ export const Skills = () => {
 
     return (
         <section id={'skills'} className={s.wrapper}>
-            <Slide direction={'left'}>
+            <Slide direction={'left'} triggerOnce={true}>
                 <div className={s.container}>
                     <h2>Skills</h2>
                     <div className={s.skillsContainer}>

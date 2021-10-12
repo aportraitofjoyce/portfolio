@@ -9,7 +9,7 @@ export const ContactMe = () => {
 
     return (
         <section id={'contact-me'} className={s.wrapper}>
-            <Slide direction={'up'} className={s.container}>
+            <Slide direction={'up'} triggerOnce={true}>
                 <div className={s.container}>
                     <h2>Contact Me</h2>
                     <Form/>

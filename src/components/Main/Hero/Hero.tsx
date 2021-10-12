@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
     return (
         <section id={'hero'} className={s.wrapper}>
             <div className={s.container}>
-                <Slide direction={'left'}>
+                <Slide direction={'left'} triggerOnce={true}>
                     <div className={s.textContainer}>
                         <h1>Web Development</h1>
                         <ReactTypingEffect
@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
                     </div>
                 </Slide>
 
-                <Slide direction={'right'}>
+                <Slide direction={'right'} triggerOnce={true}>
                     <div className={s.imageContainer}>
                         <img src={src} alt='hero-image'/>
                     </div>

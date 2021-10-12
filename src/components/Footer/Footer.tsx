@@ -5,7 +5,7 @@ import {Slide} from 'react-awesome-reveal'
 export const Footer = () => {
     return (
         <footer id='footer' className={s.wrapper}>
-            <Slide direction={'right'}>
+            <Slide direction={'right'} triggerOnce={true}>
                 <div className={s.container}>
                     <div>
                         <h4 style={{paddingBottom: 16}}>Ilya Sadosky</h4>
