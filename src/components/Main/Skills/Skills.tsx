@@ -7,6 +7,7 @@ import {JavaScript} from '../../Icons/JavaScript/JavaScript'
 import {TypeScript} from '../../Icons/TypeScript/TypeScript'
 import {HTML} from '../../Icons/HTML/HTML'
 import {CSS} from '../../Icons/CSS/CSS'
+import {Slide} from 'react-awesome-reveal'
 
 type SkillsDataType = {
     id: number
@@ -51,24 +52,24 @@ export const Skills = () => {
     return (
         <section id={'skills'} className={s.wrapper}>
             <div className={s.container}>
-                <div className={s.textContainer}>
-                    <h2>Skills</h2>
-                </div>
-
-                <div className={s.skillsContainer}>
-                    {skillsData.map(s =>
-                        <Skill key={s.name}
-                               name={s.name}
-                               description={s.description}>
-                            {s.name === 'React' && <ReactIcon/>}
-                            {s.name === 'Redux' && <Redux/>}
-                            {s.name === 'JavaScript' && <JavaScript/>}
-                            {s.name === 'TypeScript' && <TypeScript/>}
-                            {s.name === 'HTML' && <HTML/>}
-                            {s.name === 'CSS' && <CSS/>}
-                        </Skill>)}
-                </div>
+                <h2>Skills</h2>
+                <Slide direction={'left'} triggerOnce={false}>
+                    <div className={s.skillsContainer}>
+                        {skillsData.map(s =>
+                            <Skill key={s.name}
+                                   name={s.name}
+                                   description={s.description}>
+                                {s.name === 'React' && <ReactIcon/>}
+                                {s.name === 'Redux' && <Redux/>}
+                                {s.name === 'JavaScript' && <JavaScript/>}
+                                {s.name === 'TypeScript' && <TypeScript/>}
+                                {s.name === 'HTML' && <HTML/>}
+                                {s.name === 'CSS' && <CSS/>}
+                            </Skill>)}
+                    </div>
+                </Slide>
             </div>
+
         </section>
     )
 }

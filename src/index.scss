@@ -16,6 +16,10 @@ body {
   margin-top: 72px;
 }
 
+#root {
+  margin: 0 16px;
+}
+
 button {
   background-color: $primaryColor;
   color: $darkColor;
@@ -64,6 +68,10 @@ h2 {
 
 h3 {
   font-size: 24px;
+}
+
+h4 {
+  font-weight: 500;
 }
 
 svg {

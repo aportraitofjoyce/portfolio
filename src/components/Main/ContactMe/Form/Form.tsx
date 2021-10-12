@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {FormEvent, FormEventHandler} from 'react'
 import s from '../ContactMe.module.scss'
 import emailjs from 'emailjs-com'
 import {ScrollReveal} from '../../../../utils/ScrollReveal'
@@ -6,13 +6,14 @@ import {ScrollReveal} from '../../../../utils/ScrollReveal'
 export const Form = () => {
     const onSubmit = async (e: any) => {
         e.preventDefault()
-        try {
+
+        /*try {
             const response = await emailjs.sendForm('gmail', 'template_7eyueer', e.target, 'user_22VRdmcJd0uaKf5W0EuQ4')
             alert(response.text)
             e.target.reset()
         } catch (e) {
             alert(e.text)
-        }
+        }*/
     }
 
     return (

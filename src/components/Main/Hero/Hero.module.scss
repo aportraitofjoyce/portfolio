@@ -6,7 +6,6 @@
   background-color: variables.$primaryColor;
   border-radius: variables.$borderRadius;
   padding: 72px 0;
-  margin: 0 16px;
 
   .container {
     @include mixins.flex(column, center, center);
@@ -25,6 +24,11 @@
 
       h1 {
         color: variables.$darkColor;
+      }
+
+      .typingText {
+        font-weight: bold;
+        font-size: 24px;
       }
 
       button {

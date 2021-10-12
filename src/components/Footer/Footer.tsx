@@ -6,9 +6,9 @@ export const Footer = () => {
         <footer id="footer" className={s.wrapper}>
             <div className={s.container}>
                 <div>
-                    <h3 style={{paddingBottom: 16}}>Ilya Sadosky</h3>
-                    <h3 style={{paddingBottom: 16}}>aportraitofjoyce@gmail.com</h3>
-                    <h3>+375 (25) 951-40-89</h3>
+                    <h4 style={{paddingBottom: 16}}>Ilya Sadosky</h4>
+                    <h4 style={{paddingBottom: 16}}>aportraitofjoyce@gmail.com</h4>
+                    <h4>+375 (25) 951-40-89</h4>
                 </div>
             </div>
         </footer>

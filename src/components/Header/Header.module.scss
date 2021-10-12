@@ -22,31 +22,41 @@
 
     h4 {
       color: variables.$primaryColor;
+      cursor: pointer;
     }
   }
 }
 
 .mobileMenuContainer {
-  cursor: pointer;
-
   @media screen and (min-width: 1024px) {
     display: none;
   }
 
   .mobileLinksContainer {
-    display: none;
+    transition: opacity 450ms ease;
+    visibility: hidden;
+    opacity: 0;
+
+    user-select: none;
+    @include mixins.flex(column, center, center);
+    background-color: variables.$darkColor;
+    gap: 16px;
+    position: fixed;
+    top: 72px;
+    right: 0;
+    left: 0;
+    padding: 16px;
+    height: 100%;
+
+    a {
+      font-size: 24px;
+      cursor: pointer;
+    }
 
     &.open {
-      @include mixins.flex(column, center, center);
-      background-color: variables.$darkColor;
-      gap: 16px;
-      position: fixed;
-      font-size: 24px;
-      top: 72px;
-      right: 0;
-      left: 0;
-      padding: 16px;
-      height: 100%;
+      visibility: visible;
+      opacity: 1;
+
     }
   }
 }
@@ -58,5 +68,9 @@
     display: flex;
     flex-direction: row;
     gap: 16px;
+  }
+
+  a {
+    cursor: pointer;
   }
 }

@@ -4,7 +4,6 @@
 .wrapper {
     display: flex;
     justify-content: center;
-    margin: 0 16px;
     padding: 72px 0;
     border-radius: 4px;
     background-color: variables.$darkLightColor;
@@ -14,7 +13,6 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 0 16px;
     flex-grow: 1;
     text-align: center;
 }
