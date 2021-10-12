@@ -6,6 +6,7 @@
   background-color: variables.$primaryColor;
   border-radius: variables.$borderRadius;
   padding: 72px 0;
+  position: relative;
 
   .container {
     @include mixins.flex(column, center, center);
@@ -28,18 +29,9 @@
 
       .typingText {
         font-weight: bold;
-        font-size: 24px;
-      }
-
-      button {
-        background: none;
-        border-radius: 0;
-        padding: 12px 8px;
-        text-transform: none;
-        border-bottom: 2px solid variables.$darkColor;
-
-        &:hover {
-          padding: 12px 24px;
+        font-size: 18px;
+        @media screen and (min-width: variables.$containerWidth) {
+          font-size: 24px;
         }
       }
     }

@@ -51,9 +51,9 @@ export const Skills = () => {
 
     return (
         <section id={'skills'} className={s.wrapper}>
-            <div className={s.container}>
-                <h2>Skills</h2>
-                <Slide direction={'left'} triggerOnce={false}>
+            <Slide direction={'left'}>
+                <div className={s.container}>
+                    <h2>Skills</h2>
                     <div className={s.skillsContainer}>
                         {skillsData.map(s =>
                             <Skill key={s.name}
@@ -67,9 +67,8 @@ export const Skills = () => {
                                 {s.name === 'CSS' && <CSS/>}
                             </Skill>)}
                     </div>
-                </Slide>
-            </div>
-
+                </div>
+            </Slide>
         </section>
     )
 }

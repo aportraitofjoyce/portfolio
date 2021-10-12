@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './Projects.module.scss'
 import {Project} from './Project/Project'
+import {Slide} from 'react-awesome-reveal'
 
 type ProjectsDataType = {
     id: number
@@ -43,14 +44,17 @@ export const Projects = () => {
 
     return (
         <section id={'projects'} className={s.wrapper}>
-            <div className={s.container}>
-                <div className={s.textContainer}>
-                    <h2>Projects</h2>
+            <Slide direction={'right'}>
+                <div className={s.container}>
+                    <div className={s.textContainer}>
+                        <h2>Projects</h2>
+                    </div>
+
+                    <div className={s.projectsContainer}>
+                        {projects}
+                    </div>
                 </div>
-                <div className={s.projectsContainer}>
-                    {projects}
-                </div>
-            </div>
+            </Slide>
         </section>
     )
 }

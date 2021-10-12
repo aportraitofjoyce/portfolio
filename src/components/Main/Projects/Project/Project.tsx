@@ -1,6 +1,6 @@
 import React from 'react'
 import s from '../Projects.module.scss'
-import {ScrollReveal} from '../../../../utils/ScrollReveal'
+import Tilt from 'react-parallax-tilt'
 
 type ProjectPropsType = {
     name: string
@@ -12,10 +12,12 @@ export const Project: React.FC<ProjectPropsType> = (props) => {
     return (
 
         <div className={s.projectContainer}>
-            <div className={s.imageContainer}>
-                <img src={props.image} alt={props.name}/>
-                <button className={s.button}>Look</button>
-            </div>
+            <Tilt transitionSpeed={5500}>
+                <div className={s.imageContainer}>
+                    <img src={props.image} alt={props.name}/>
+                    <button className={s.button}>Look</button>
+                </div>
+            </Tilt>
             <strong>{props.name}</strong>
             <div>{props.shortDescription}</div>
         </div>

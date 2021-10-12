@@ -18,6 +18,10 @@ body {
 
 #root {
   margin: 0 16px;
+
+  @media screen and (min-width: $containerWidth) {
+    margin: 0 24px;
+  }
 }
 
 button {
@@ -50,6 +54,7 @@ a {
   color: $lightColor;
   text-decoration: none;
   font-weight: 500;
+  cursor: pointer;
 
   &:hover {
     color: $primaryColor;
@@ -57,13 +62,19 @@ a {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 40px;
   color: $primaryColor;
+  @media screen and (min-width: $containerWidth) {
+    font-size: 56px;
+  }
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 32px;
   color: $primaryColor;
+  @media screen and (min-width: $containerWidth) {
+    font-size: 40px;
+  }
 }
 
 h3 {
@@ -80,4 +91,12 @@ svg {
 
 strong {
   font-weight: 500;
+}
+
+.particle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }

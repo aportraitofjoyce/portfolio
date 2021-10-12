@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {FC} from 'react'
 import {Header} from './components/Header/Header'
 import {Hero} from './components/Main/Hero/Hero'
 import {Skills} from './components/Main/Skills/Skills'
@@ -8,7 +8,7 @@ import {Footer} from './components/Footer/Footer'
 import {Social} from './components/Main/Social/Social'
 import './index.scss'
 
-export const App: React.FC = () => (
+export const App: FC = () => (
     <>
         <Header/>
         <main>
