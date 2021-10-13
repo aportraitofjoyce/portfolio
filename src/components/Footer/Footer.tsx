@@ -5,15 +5,15 @@ import {Slide} from 'react-awesome-reveal'
 export const Footer = () => {
     return (
         <footer id='footer' className={s.wrapper}>
-            <Slide direction={'right'} triggerOnce={true}>
-                <div className={s.container}>
+            <div className={s.container}>
+                <Slide direction={'right'} triggerOnce={true} style={{width: 'inherit'}}>
                     <div>
                         <h4 style={{paddingBottom: 16}}>Ilya Sadosky</h4>
                         <h4 style={{paddingBottom: 16}}>aportraitofjoyce@gmail.com</h4>
                         <h4>+375 (25) 951-40-89</h4>
                     </div>
-                </div>
-            </Slide>
+                </Slide>
+            </div>
         </footer>
     )
 }

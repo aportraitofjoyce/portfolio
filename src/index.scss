@@ -14,6 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-top: 72px;
+  overflow-x: hidden;
 }
 
 #root {
@@ -47,7 +48,6 @@ input {
 
 textarea {
   @include inputsDefault;
-  max-width: 448px;
 }
 
 a {
@@ -86,7 +86,7 @@ h4 {
 }
 
 svg {
-  color: $primaryColor;
+  color: $darkColor;
 }
 
 strong {

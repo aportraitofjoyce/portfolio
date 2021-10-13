@@ -1,49 +1,34 @@
+@use 'src/styles/variables';
+@use 'src/styles/mixins';
+
 .wrapper {
-    display: flex;
-    justify-content: center;
-    padding: 72px 0;
-    border-radius: 4px;
-}
+  @include mixins.wrapper;
 
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    flex-grow: 1;
-    text-align: center;
-}
+  .container {
+    @include mixins.container;
 
-.skillsContainer {
-    display: flex;
-    flex-wrap: wrap;
-}
+    .skillsContainer {
+      @include mixins.flex(row);
 
-.skillContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    padding: 24px;
-    flex: 1 1 50%;
-}
+      .skillContainer {
+        @include mixins.flex(column);
+        flex: 1 1 50%;
+        gap: 16px;
+        padding: 16px;
+        @media screen and (min-width: variables.$containerWidth) {
+          padding: 24px;
+        }
 
-.iconContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        .iconContainer {
+          @include mixins.flex();
+          width: 48px;
+          height: 48px;
 
-    width: 48px;
-    height: 48px;
-    border-radius: 4px;
-}
-
-@media screen and (min-width: 1024px) {
-    .container {
-        flex-grow: 0;
-        width: 1024px;
+          svg {
+            color: variables.$primaryColor;
+          }
+        }
+      }
     }
-
-    .skillContainer {
-        flex: 1 1 33.33%;
-    }
+  }
 }

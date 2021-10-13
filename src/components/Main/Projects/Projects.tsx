@@ -44,17 +44,14 @@ export const Projects = () => {
 
     return (
         <section id={'projects'} className={s.wrapper}>
-            <Slide direction={'right'} triggerOnce={true}>
-                <div className={s.container}>
-                    <div className={s.textContainer}>
-                        <h2>Projects</h2>
-                    </div>
-
+            <div className={s.container}>
+                <h2>Projects</h2>
+                <Slide direction={'right'} triggerOnce={true}>
                     <div className={s.projectsContainer}>
                         {projects}
                     </div>
-                </div>
-            </Slide>
+                </Slide>
+            </div>
         </section>
     )
 }

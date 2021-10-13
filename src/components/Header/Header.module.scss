@@ -2,7 +2,7 @@
 @use 'src/styles/mixins';
 
 .wrapper {
-  @include mixins.flex(row, center, center);
+  @include mixins.flex();
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@
   z-index: 100;
 
   .container {
-    @include mixins.flex(row, space-between, center);
+    @include mixins.flex(row, space-between);
     width: 100%;
     padding: 0 16px;
     @media screen and (min-width: variables.$containerWidth) {
@@ -23,47 +23,55 @@
       color: variables.$primaryColor;
       cursor: pointer;
     }
-  }
-}
 
-.mobileMenuContainer {
-  @media screen and (min-width: variables.$containerWidth) {
-    display: none;
-  }
-
-  .mobileLinksContainer {
-    transition: opacity 450ms ease;
-    visibility: hidden;
-    opacity: 0;
-
-    user-select: none;
-    @include mixins.flex(column, center, center);
-    background-color: variables.$darkColor;
-    gap: 16px;
-    position: fixed;
-    right: 0;
-    left: 0;
-    padding: 16px;
-    height: 100%;
-
-    a {
-      font-size: 24px;
+    .active {
+      color: variables.$primaryColor;
     }
 
-    &.open {
-      visibility: visible;
-      opacity: 1;
+    .mobileMenuContainer {
+      @media screen and (min-width: variables.$containerWidth) {
+        display: none;
+      }
 
+      svg {
+        color: variables.$primaryColor;
+      }
+
+      .mobileLinksContainer {
+        transition: opacity 450ms ease;
+        visibility: hidden;
+        opacity: 0;
+        user-select: none;
+        @include mixins.flex(column);
+        background-color: variables.$darkColor;
+        gap: 16px;
+        position: fixed;
+        right: 0;
+        left: 0;
+        padding: 16px;
+        height: 100%;
+
+        a {
+          font-size: 24px;
+        }
+
+        &.open {
+          visibility: visible;
+          opacity: 1;
+
+        }
+      }
+    }
+
+    .linksContainer {
+      display: none;
+
+      @media screen and (min-width: variables.$containerWidth) {
+        @include mixins.flex();
+        gap: 16px;
+      }
     }
   }
 }
 
-.linksContainer {
-  display: none;
 
-  @media screen and (min-width: variables.$containerWidth) {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-  }
-}

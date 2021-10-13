@@ -9,12 +9,12 @@ export const ContactMe = () => {
 
     return (
         <section id={'contact-me'} className={s.wrapper}>
-            <Slide direction={'up'} triggerOnce={true}>
-                <div className={s.container}>
-                    <h2>Contact Me</h2>
+            <div className={s.container}>
+                <h2>Contact Me</h2>
+                <Slide direction={'up'} triggerOnce={true} style={{width: '100%'}}>
                     <Form/>
-                </div>
-            </Slide>
+                </Slide>
+            </div>
         </section>
     )
 }

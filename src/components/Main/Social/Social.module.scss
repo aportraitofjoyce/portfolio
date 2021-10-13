@@ -1,31 +1,23 @@
 @use 'src/styles/variables';
+@use 'src/styles/mixins';
 
 .wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 72px 0;
-  margin: 0;
+  @include mixins.wrapper;
 
   .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    padding: 0 16px;
+    @include mixins.container;
 
     .iconsContainer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 24px;
-      max-width: 448px;
-      width: 100%;
+      @include mixins.flex();
+      gap: 16px;
+      padding: 16px;
+      @media screen and (min-width: variables.$containerWidth) {
+        gap: 24px;
+        padding: 16px;
+      }
 
       .iconContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include mixins.flex();
         flex-grow: 1;
         width: 48px;
         height: 48px;
@@ -37,11 +29,5 @@
         }
       }
     }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .container {
-    width: 1024px;
   }
 }

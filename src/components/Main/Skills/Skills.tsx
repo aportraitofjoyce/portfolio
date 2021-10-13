@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {FC} from 'react'
 import s from './Skills.module.scss'
 import {Skill} from './Skill/Skill'
 import {ReactIcon} from '../../Icons/React/ReactIcon'
@@ -15,7 +15,7 @@ type SkillsDataType = {
     description: string
 }
 
-export const Skills = () => {
+export const Skills: FC = () => {
     const skillsData: SkillsDataType[] = [
         {
             id: 1,
@@ -51,9 +51,9 @@ export const Skills = () => {
 
     return (
         <section id={'skills'} className={s.wrapper}>
-            <Slide direction={'left'} triggerOnce={true}>
-                <div className={s.container}>
-                    <h2>Skills</h2>
+            <div className={s.container}>
+                <h2>Skills</h2>
+                <Slide direction={'left'} triggerOnce={true}>
                     <div className={s.skillsContainer}>
                         {skillsData.map(s =>
                             <Skill key={s.name}
@@ -65,10 +65,11 @@ export const Skills = () => {
                                 {s.name === 'TypeScript' && <TypeScript/>}
                                 {s.name === 'HTML' && <HTML/>}
                                 {s.name === 'CSS' && <CSS/>}
-                            </Skill>)}
+                            </Skill>
+                        )}
                     </div>
-                </div>
-            </Slide>
+                </Slide>
+            </div>
         </section>
     )
 }

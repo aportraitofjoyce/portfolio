@@ -1,10 +1,10 @@
-import React from 'react'
+import React, {FC} from 'react'
 import s from './Hero.module.scss'
 import src from '../../../assets/img/hero.png'
 import ReactTypingEffect from 'react-typing-effect'
 import {Slide} from 'react-awesome-reveal'
 
-export const Hero: React.FC = () => {
+export const Hero: FC = () => {
     return (
         <section id={'hero'} className={s.wrapper}>
             <div className={s.container}>
@@ -18,7 +18,6 @@ export const Hero: React.FC = () => {
                             eraseDelay={1500}
                             speed={100}
                             eraseSpeed={100}/>
-
                     </div>
                 </Slide>
 

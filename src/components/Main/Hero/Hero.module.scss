@@ -2,46 +2,41 @@
 @use 'src/styles/mixins';
 
 .wrapper {
-  @include mixins.flex(row, center, center);
+  @include mixins.wrapper;
   background-color: variables.$primaryColor;
-  border-radius: variables.$borderRadius;
-  padding: 72px 0;
-  position: relative;
 
   .container {
-    @include mixins.flex(column, center, center);
-    gap: 40px;
-    padding: 0 16px;
+    @include mixins.container;
 
     @media screen and (min-width: variables.$containerWidth) {
-      @include mixins.flex(row, space-between, center);
-      width: variables.$containerWidth;
+      @include mixins.flex(row, center, center, nowrap);
     }
 
     .textContainer {
       @include mixins.flex(column, center, flex-start);
-      gap: 24px;
-      color: variables.$darkColor;
+      text-align: left;
+      gap: 16px;
+      padding: 16px;
 
       h1 {
         color: variables.$darkColor;
       }
 
       .typingText {
+        color: variables.$darkColor;
         font-weight: bold;
         font-size: 18px;
         @media screen and (min-width: variables.$containerWidth) {
-          font-size: 24px;
+          font-size: 20px;
         }
       }
     }
 
     .imageContainer {
-      width: 100%;
+      padding: 16px;
 
       img {
-        width: inherit;
-        height: inherit;
+        width: 100%;
       }
     }
   }

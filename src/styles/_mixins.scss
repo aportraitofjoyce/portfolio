@@ -6,15 +6,33 @@
   outline: none;
   padding: 12px;
   border-radius: 4px;
+  width: 100%;
 
   &:hover, &:focus {
     border-color: variables.$lightColor;
   }
 }
 
-@mixin flex($flexDirection: row, $justifyContent: center, $alignItems: center) {
+@mixin flex($flexDirection: row, $justifyContent: center, $alignItems: center, $wrap: wrap) {
   display: flex;
   flex-direction: $flexDirection;
   justify-content: $justifyContent;
   align-items: $alignItems;
+  flex-wrap: $wrap;
+}
+
+@mixin wrapper {
+  @include flex(row, center, center);
+  padding: 64px 0;
+  border-radius: 4px;
+}
+
+@mixin container {
+  @include flex(row, center, center);
+  gap: 32px;
+  text-align: center;
+  width: 100%;
+  @media screen and (min-width: variables.$containerWidth) {
+    width: variables.$containerWidth;
+  }
 }
