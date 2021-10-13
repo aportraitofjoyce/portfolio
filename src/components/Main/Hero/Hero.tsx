@@ -2,13 +2,13 @@ import React, {FC} from 'react'
 import s from './Hero.module.scss'
 import src from '../../../assets/img/hero.png'
 import ReactTypingEffect from 'react-typing-effect'
-import {Slide} from 'react-awesome-reveal'
+import {Fade} from 'react-awesome-reveal'
 
 export const Hero: FC = () => {
     return (
         <section id={'hero'} className={s.wrapper}>
             <div className={s.container}>
-                <Slide direction={'left'} triggerOnce={true}>
+                <Fade direction={'left'} triggerOnce={true}>
                     <div className={s.textContainer}>
                         <h1>Web Development</h1>
                         <ReactTypingEffect
@@ -19,13 +19,13 @@ export const Hero: FC = () => {
                             speed={100}
                             eraseSpeed={100}/>
                     </div>
-                </Slide>
+                </Fade>
 
-                <Slide direction={'right'} triggerOnce={true}>
+                <Fade direction={'right'} triggerOnce={true}>
                     <div className={s.imageContainer}>
                         <img src={src} alt='hero-image'/>
                     </div>
-                </Slide>
+                </Fade>
             </div>
         </section>
 

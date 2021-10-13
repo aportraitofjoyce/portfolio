@@ -7,7 +7,7 @@ import {JavaScript} from '../../Icons/JavaScript/JavaScript'
 import {TypeScript} from '../../Icons/TypeScript/TypeScript'
 import {HTML} from '../../Icons/HTML/HTML'
 import {CSS} from '../../Icons/CSS/CSS'
-import {Slide} from 'react-awesome-reveal'
+import {Fade} from 'react-awesome-reveal'
 
 type SkillsDataType = {
     id: number
@@ -53,7 +53,7 @@ export const Skills: FC = () => {
         <section id={'skills'} className={s.wrapper}>
             <div className={s.container}>
                 <h2>Skills</h2>
-                <Slide direction={'left'} triggerOnce={true}>
+                <Fade direction={'left'} triggerOnce={true}>
                     <div className={s.skillsContainer}>
                         {skillsData.map(s =>
                             <Skill key={s.name}
@@ -68,7 +68,7 @@ export const Skills: FC = () => {
                             </Skill>
                         )}
                     </div>
-                </Slide>
+                </Fade>
             </div>
         </section>
     )

@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './Projects.module.scss'
 import {Project} from './Project/Project'
-import {Slide} from 'react-awesome-reveal'
+import {Fade} from 'react-awesome-reveal'
 
 type ProjectsDataType = {
     id: number
@@ -46,11 +46,11 @@ export const Projects = () => {
         <section id={'projects'} className={s.wrapper}>
             <div className={s.container}>
                 <h2>Projects</h2>
-                <Slide direction={'right'} triggerOnce={true}>
+                <Fade direction={'right'} triggerOnce={true}>
                     <div className={s.projectsContainer}>
                         {projects}
                     </div>
-                </Slide>
+                </Fade>
             </div>
         </section>
     )

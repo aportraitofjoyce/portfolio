@@ -4,14 +4,13 @@ import {Github} from '../../Icons/Github/Github'
 import {Telegram} from '../../Icons/Telegram/Telegram'
 import {Email} from '../../Icons/Email/Email'
 import {Phone} from '../../Icons/Phone/Phone'
-import {Slide} from 'react-awesome-reveal'
+import {Fade} from 'react-awesome-reveal'
 
 export const Social = () => {
     return (
         <section className={s.wrapper}>
-
             <div className={s.container}>
-                <Slide direction={'left'} triggerOnce={true}>
+                <Fade direction={'left'} triggerOnce={true}>
                     <div className={s.iconsContainer}>
                         <a className={s.iconContainer} href={'https://github.com/aportraitofjoyce'} target={'_blank'}
                            rel='noreferrer'>
@@ -29,7 +28,7 @@ export const Social = () => {
                             <Phone/>
                         </a>
                     </div>
-                </Slide>
+                </Fade>
             </div>
 
         </section>
