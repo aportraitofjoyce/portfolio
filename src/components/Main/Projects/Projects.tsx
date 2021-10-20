@@ -13,28 +13,29 @@ export const Projects = () => {
     const projectsData: ProjectsDataType[] = [
         {
             id: 1,
-            name: 'Todolist',
-            shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptatibus!',
-            image: 'https://img.freepik.com/free-vector/happy-anime-face-manga-style-big-blue-eyes-little-nose-and-big-kawaii-mouth-yellow-sparkles-in-her-eyes-hand-drawn-illustration_163875-596.jpg?size=626&ext=jpg'
-        },
-        {
-            id: 2,
             name: 'Social Network',
-            shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptatibus!',
+            shortDescription: 'Here realised some interesting features like simple web-socket chat, real users list and their profiles, private profile edit page.',
             image: 'https://img.freepik.com/free-vector/scared-anime-face-manga-style-big-blue-eyes-little-nose-and-kawaii-mouth-hand-drawn-vector-cartoon-illustration_163875-302.jpg?size=626&ext=jpg'
         },
         {
+            id: 2,
+            name: 'Cards',
+            shortDescription: 'Project where user can build you own cards packs with questions for interview or learning foreign languages.',
+            image: 'https://img.freepik.com/free-vector/sad-anime-face-manga-style-closed-eyes-little-nose-and-kawaii-mouth-hand-drawn-vector-cartoon-illustration_163875-339.jpg?size=626&ext=jpg&ga=GA1.2.357312108.1628380800'
+        },
+        {
             id: 3,
-            name: 'Counter',
-            shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptatibus!',
-            image: 'https://img.freepik.com/free-vector/happy-anime-woman-s-face_163875-361.jpg?size=626&ext=jpg&ga=GA1.2.458305372.1628899200'
+            name: 'Todolist',
+            shortDescription: 'Classic todo with full CRUD flow and modern React/Redux approaches.',
+            image: 'https://img.freepik.com/free-vector/happy-anime-face-manga-style-big-blue-eyes-little-nose-and-big-kawaii-mouth-yellow-sparkles-in-her-eyes-hand-drawn-illustration_163875-596.jpg?size=626&ext=jpg'
         },
         {
             id: 4,
-            name: 'Cards',
-            shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptatibus!',
-            image: 'https://img.freepik.com/free-vector/sad-anime-face-manga-style-closed-eyes-little-nose-and-kawaii-mouth-hand-drawn-vector-cartoon-illustration_163875-339.jpg?size=626&ext=jpg&ga=GA1.2.357312108.1628380800'
-        }
+            name: 'Counter',
+            shortDescription: 'Simple counter with well-worked fields and values dependencies.',
+            image: 'https://img.freepik.com/free-vector/happy-anime-woman-s-face_163875-361.jpg?size=626&ext=jpg&ga=GA1.2.458305372.1628899200'
+        },
+
     ]
 
     const projects = projectsData.map(p => <Project key={p.name}

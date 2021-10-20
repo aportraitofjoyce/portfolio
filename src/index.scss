@@ -48,6 +48,7 @@ input {
 
 textarea {
   @include inputsDefault;
+  max-width: 100%;
 }
 
 a {
