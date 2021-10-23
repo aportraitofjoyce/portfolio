@@ -20,7 +20,7 @@ export const Form = () => {
     const onSubmit = async (values: FormInitValues) => {
         try {
             await emailjs.send('gmail', 'template_7eyueer', values, 'user_22VRdmcJd0uaKf5W0EuQ4')
-            alert('Thank you! I will contact you soon')
+            alert('Thanks! I will contact you soon')
         } catch (e) {
             alert(e.text)
         }

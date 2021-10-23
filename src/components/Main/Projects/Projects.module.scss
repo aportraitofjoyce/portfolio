@@ -13,9 +13,13 @@
 
       .projectContainer {
         @include mixins.flex(column);
-        flex: 1 1 50%;
         gap: 16px;
         padding: 16px;
+
+        @media screen and (min-width: 768px) {
+          flex: 1 1 50%;
+        }
+
         @media screen and (min-width: variables.$containerWidth) {
           padding: 24px;
         }
@@ -27,15 +31,14 @@
           img {
             border-radius: 4px;
             width: inherit;
-            filter: grayscale(1);
           }
 
-          .button {
+          a {
             position: absolute;
             display: none;
           }
 
-          &:hover .button {
+          &:hover a {
             display: initial;
           }
         }

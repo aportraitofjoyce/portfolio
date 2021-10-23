@@ -6,6 +6,7 @@ type ProjectPropsType = {
     name: string
     shortDescription: string
     image: string
+    link: string
 }
 
 export const Project: React.FC<ProjectPropsType> = (props) => {
@@ -15,10 +16,14 @@ export const Project: React.FC<ProjectPropsType> = (props) => {
             <Tilt transitionSpeed={5500}>
                 <div className={s.imageContainer}>
                     <img src={props.image} alt={props.name}/>
-                    <button className={s.button}>Look</button>
+                    <a href={props.link} target={'_blank'} rel={'noreferrer'}>
+                        <button className={s.button}>Look</button>
+                    </a>
                 </div>
             </Tilt>
-            <strong>{props.name}</strong>
+            <a href={props.link} rel={'noreferrer'} target={'_blank'}>
+                <strong>{props.name}</strong>
+            </a>
             <div>{props.shortDescription}</div>
         </div>
 

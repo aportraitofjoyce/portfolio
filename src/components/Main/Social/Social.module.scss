@@ -3,6 +3,7 @@
 
 .wrapper {
   @include mixins.wrapper;
+  background-color: variables.$darkLightColor;
 
   .container {
     @include mixins.container;
@@ -13,7 +14,7 @@
       padding: 16px;
       @media screen and (min-width: variables.$containerWidth) {
         gap: 24px;
-        padding: 16px;
+        padding: 24px;
       }
 
       .iconContainer {
@@ -23,6 +24,9 @@
         height: 48px;
         border-radius: 4px;
         background-color: variables.$primaryColor;
+        &:hover {
+          opacity: 0.8;
+        }
 
         svg {
           color: variables.$darkColor;

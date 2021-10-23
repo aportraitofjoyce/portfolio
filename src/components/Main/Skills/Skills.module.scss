@@ -12,11 +12,17 @@
 
       .skillContainer {
         @include mixins.flex(column);
-        flex: 1 1 50%;
+        flex: 1 1 100%;
         gap: 16px;
         padding: 16px;
+
+        @media screen and (min-width: 768px) {
+          flex: 1 1 50%;
+        }
+
         @media screen and (min-width: variables.$containerWidth) {
           padding: 24px;
+          flex: 1 1 33.3%;
         }
 
         .iconContainer {

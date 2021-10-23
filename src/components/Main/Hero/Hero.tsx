@@ -23,7 +23,7 @@ export const Hero: FC = () => {
 
                 <Fade direction={'right'} triggerOnce={true}>
                     <div className={s.imageContainer}>
-                        <img src={src} alt='hero-image'/>
+                        <img src={src} alt='hero'/>
                     </div>
                 </Fade>
             </div>

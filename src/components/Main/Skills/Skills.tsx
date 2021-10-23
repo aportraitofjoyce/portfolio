@@ -20,32 +20,32 @@ export const Skills: FC = () => {
         {
             id: 1,
             name: 'React',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'
+            description: 'Functional React on hooks'
         },
         {
             id: 2,
             name: 'Redux',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'
+            description: 'Native and Redux Toolkit, Thunks'
         },
         {
             id: 3,
             name: 'JavaScript',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'
+            description: 'ES6+ syntax, still learning every day'
         },
         {
             id: 4,
             name: 'TypeScript',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'
+            description: 'TS for typed programming'
         },
         {
             id: 5,
-            name: 'HTML',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'
+            name: 'HTML5',
+            description: 'Semantic HTML, Local/Session Storage'
         },
         {
             id: 6,
-            name: 'CSS',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatum.'
+            name: 'CSS3',
+            description: 'Native CSS, SASS preprocessor'
         }
     ]
 
@@ -63,8 +63,8 @@ export const Skills: FC = () => {
                                 {s.name === 'Redux' && <Redux/>}
                                 {s.name === 'JavaScript' && <JavaScript/>}
                                 {s.name === 'TypeScript' && <TypeScript/>}
-                                {s.name === 'HTML' && <HTML/>}
-                                {s.name === 'CSS' && <CSS/>}
+                                {s.name === 'HTML5' && <HTML/>}
+                                {s.name === 'CSS3' && <CSS/>}
                             </Skill>
                         )}
                     </div>

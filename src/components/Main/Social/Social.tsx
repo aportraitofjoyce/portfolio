@@ -10,27 +10,26 @@ export const Social = () => {
     return (
         <section className={s.wrapper}>
             <div className={s.container}>
-                <Fade direction={'left'} triggerOnce={true}>
+                <Fade direction={'right'} triggerOnce={true} style={{width: '100%'}}>
                     <div className={s.iconsContainer}>
-                        <a className={s.iconContainer} href={'https://github.com/aportraitofjoyce'} target={'_blank'}
-                           rel='noreferrer'>
+                        <a className={s.iconContainer} href={'https://github.com/aportraitofjoyce'}
+                           target={'_blank'} rel='noreferrer'>
                             <Github/>
                         </a>
-                        <a className={s.iconContainer} href={'https://t.me/aportraitofjoyce'} target={'_blank'}
-                           rel='noreferrer'>
+                        <a className={s.iconContainer} href={'https://t.me/aportraitofjoyce'}
+                           target={'_blank'} rel='noreferrer'>
                             <Telegram/>
                         </a>
-                        <a className={s.iconContainer} href={'mailto:aportraitofjoyce@gmail.com'} target={'_blank'}
-                           rel='noreferrer'>
+                        <a className={s.iconContainer} href={'mailto:aportraitofjoyce@gmail.com'}
+                           target={'_blank'} rel='noreferrer'>
                             <Email/>
                         </a>
-                        <a className={s.iconContainer} href={'tel:+375259514089'} rel='noreferrer'>
+                        <a className={s.iconContainer} href={'tel:+375259514089'} rel={'noreferrer'}>
                             <Phone/>
                         </a>
                     </div>
                 </Fade>
             </div>
-
         </section>
     )
 }

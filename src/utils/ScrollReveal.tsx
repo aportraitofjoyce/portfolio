@@ -25,7 +25,7 @@ export const ScrollReveal: React.FC<ScrollRevealPropsType> = props => {
         if (sectionRef.current)
             scrollReveal().reveal(sectionRef.current, {
                 delay: delay || 0,
-                duration: duration || 400,
+                duration: duration || 1000,
                 distance: distance || '100%',
                 scale: scale || 1,
                 origin: origin || 'left',
@@ -37,7 +37,7 @@ export const ScrollReveal: React.FC<ScrollRevealPropsType> = props => {
                     z: 0
                 }
             })
-    }, [])
+    }, [delay, distance, duration, origin, scale, opacity, easing, rotate])
 
     return (
         <div ref={sectionRef}>
