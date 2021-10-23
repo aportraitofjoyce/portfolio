@@ -1,12 +1,9 @@
 import React from 'react'
 import s from './ContactMe.module.scss'
 import {Form} from './Form/Form'
-import scrollReveal from 'scrollreveal'
 import {Fade} from 'react-awesome-reveal'
 
 export const ContactMe = () => {
-    scrollReveal().reveal('.contact-me')
-
     return (
         <section id={'contact-me'} className={s.wrapper}>
             <div className={s.container}>
